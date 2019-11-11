@@ -11,8 +11,9 @@ def bomb(num):
 
 
 if __name__ == "__main__":
-
-    numbers = [ "6200841772", "7905179464", "9304225752" ]
+    numbers = []
+    for i in range(0,int(input("Enter No. Phone Numbers: "))):
+        numbers.append(str(input("Enter Phone No " + str(i) + " :")))
     for i in numbers:
         print(i)
         t = threading.Thread(target=bomb, args=(i,))
